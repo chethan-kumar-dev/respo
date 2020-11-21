@@ -1,0 +1,225 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+       
+       @media only screen and (max-width: 415px) {  
+    /* For desktop: */  
+   #links{visibility: hidden;}
+    }
+    @media only screen and (min-width: 414px) {  
+    /* For desktop: */  
+   .toggy{visibility: hidden;}
+    }
+        #txtboxone::before{
+            display: block;
+            width: 40px;
+            height: 10px;
+            padding: 3px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: orange;
+            color: black;
+            content: 'name';
+            font-size: 12px;
+            position: absolute;
+            left: 62px;
+            box-shadow: 2px 2px 10px black;
+        }
+        #txtboxtwo::before{
+            display: block;
+            width: 40px;
+            height: 10px;
+            padding: 3px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: orange;
+            color: black;
+            content: 'email';
+            font-size: 12px;
+            left: 62px;
+            position: absolute;
+            box-shadow: 2px 2px 10px black;
+        }
+        input[type="text"]{
+            border: 2px solid rgb(8, 8, 8);
+            padding: 8px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .big-container{
+            width: 300px;
+            height: 290px;
+            padding: 30px;
+            border-radius: 40px;
+            box-sizing: border-box;
+            animation:3s linear cock infinite;
+            background: linear-gradient(rgb(60, 142, 180),rgb(86,9,120));
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #butt{
+            padding: 8px;
+            border: none;
+            border-radius: 10px;
+            background-color: orangered;
+            color: white;
+            box-shadow: 2px 2px 10px black;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        @keyframes cock
+        {
+            50%{background: linear-gradient(rgb(60, 142, 170),rgb(86, 9, 131));}
+            60%{background: linear-gradient(rgb(60, 142, 170),rgb(86, 9, 145));}
+            100%{background: linear-gradient(rgb(60, 142, 160),rgb(86, 9, 115));}
+        }
+       
+        #links ul{
+            list-style-type: none;
+            float: right;
+            position: absolute;
+        }
+        #links ul li{
+            float: left;
+             width: 100px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .custom-shape-divider-top-1605870982 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-top-1605870982 svg {
+    position: relative;
+    display: block;
+    width: calc(278% + 1.3px);
+    height: 269px;
+}
+.custom-shape-divider-top-1605870982 .shape-fill {
+    fill: #FFFFFF;
+}
+.menus{
+    background-color: rgb(0,0,0,0.8);
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+}
+.menus ul{
+            list-style-type: none;
+            float: right;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+.menus ul li{
+            width: 80px;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            margin: 10px;
+        }
+        .toggy{
+            color: rgb(35, 33, 161);position: absolute;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(87, 87, 136);">
+    <div class="custom-shape-divider-top-1605870982">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <div id="links">
+        <ul>
+            <li>home</li>
+            <li>contact</li>
+            <li>aboutus</li>
+            <li>logout</li>
+        </ul>
+    </div>
+    <div class="big-container">
+
+    <h1 style="color: white;">LOGIN PAGE</h1>
+    <div id="txtboxone">
+        <input type="text" id="txtone">
+        <i class="material-icons" >&#xe7fd;</i>
+    </div>
+    <div id="txtboxtwo">
+        <input type="text" id="txttwo">
+        <i class="material-icons" >&#xe7fd;</i>
+    </div>
+    <br>
+    <BUTTON id="butt" onclick="func()">login</BUTTON>
+</div>
+<div class="menus" id="menus">
+    <ul>
+        <li>Home</li>
+        <hr>
+        <li>Contact</li>
+        <hr>
+        <li>boutus</li>
+        <hr>
+        <li>logout</li>
+    </ul>
+</div>
+<div class="toggy" id="toggy" onclick="execute()">&#9776;</div>
+
+<script>
+function func()
+{
+    var val1=document.getElementById("txtone").value;
+    var val2=document.getElementById("txttwo").value;
+    var one=document.getElementsByTagName("i")[0];
+    var two=document.getElementsByTagName("i")[1];
+    val1==""?one.style.color='red':one.style.color='green'
+    val2==""?two.style.color='red':two.style.color='green'
+}
+var toggy=document.getElementById("toggy");
+var men=document.getElementById("menus")
+function execute()
+{
+    if(men.style.width=="100%")
+    {
+        men.style.width="0px";
+        men.style.height="0px";
+       
+        men.style.transition="300ms linear ease-in-out";
+        men.style.transitionProperty="width,height";
+        men.style.overflow="hidden";
+        toggy.innerHTML="&#9776;"
+        toggy.style.color="rgb(35, 33, 161)"
+
+    }
+    else
+    {
+        men.style.width="100%";
+        men.style.height="100%"
+        men.style.transition="300ms linear ease-in-out";
+        men.style.transitionProperty="width,height";
+        men.style.overflow="hidden"
+        toggy.innerHTML="&times;"
+        toggy.style.color="white"
+
+    }
+  
+}
+</script>
+</body>
+</html>
